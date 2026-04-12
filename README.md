@@ -3,9 +3,7 @@
 This repository contains analysis code and Boltz-2 prediction 
 results for the following manuscript:
 
-**"Binder2030: A Standardized Quantitative Binding Dataset 
-for Benchmarking AI-Based Affinity Prediction Across 
-Membrane Protein Targets"**
+**"A unified experimental benchmark reveals structural determinants of AI-based affinity prediction across membrane proteins"**
 
 Naoki Tarui, Thuy Duong Nguyen, Masaharu Nakayama  
 SEEDSUPPLY INC.  
@@ -24,6 +22,7 @@ Website: www.seedsupply.co.jp
 | fpocket_gpcr_results.csv | fpocket drug_score, GPCR (n=100) |
 | fpocket_slc_results.csv | fpocket drug_score, SLC (n=82) |
 | integrated_analysis.csv | GPCR+SLC integrated analysis (n=182) |
+| chai1_gpcr_comparison.csv | Per-target Pearson r for Chai-1 ipTM-based affinity prediction vs experimental pKd (GPCR, n=100); includes Boltz-2 comparison data |
 
 ### scripts/
 | File | Description |
@@ -60,6 +59,15 @@ Website: www.seedsupply.co.jp
 - Structural predictor P = 0.0001***
 - fpocket drug_score uninformative in both classes (P = 0.916)
 - std_aff_value as post-hoc prediction reliability indicator
+
+ ### Exploratory Comparison: Boltz-2 vs Chai-1 
+   (100 GPCR targets)
+   - Boltz-2 and Chai-1 show only weak concordance 
+     (Pearson r = 0.317, P = 0.0013)
+   - CWxP(+) GPCRs: Boltz-2 mean r = 0.285 vs 
+     Chai-1 mean r = 0.106
+   - CWxP-associated structural principle appears 
+     model-specific to Boltz-2
 
 ---
 
